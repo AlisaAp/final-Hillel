@@ -1,0 +1,119 @@
+// PUBLICATIONS //
+
+.publications {
+  // .publications__container
+  &__wrapper {
+    background-color: $bg_color;
+
+    @media screen and (min-width: $breakpoint-xxl) {
+      margin-top: 60px;
+    }
+  }
+  &__container {
+    color: #000000;
+  }
+
+  // .publications__section
+
+  &__section {
+    padding-top: 30px;
+  }
+  .section__title {
+    margin-bottom: 5px;
+  }
+
+  // .publications__blocks
+
+  &__blocks {
+    @media screen and (min-width: $breakpoint-md) {
+      display: flex;
+      flex-flow: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  // .publications__block
+
+  &__block {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    margin-top: 30px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 0;
+      + a {
+        display: block;
+        line-height: 0;
+      }
+    }
+  }
+  &__block:first-child,
+  &__block:nth-child(2) {
+    @media screen and (min-width: $breakpoint-md) {
+      flex: 1 1 47%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1 1 30%;
+    }
+  }
+  &__block:nth-child(3) {
+    @media screen and (min-width: $breakpoint-md) {
+      flex: 1 1 100%;
+      margin: 0;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1 1 30%;
+    }
+  }
+
+  // .publications__img
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // .publications__content
+
+  &__content {
+    padding: 30px;
+    a {
+      display: inline-block;
+    }
+  }
+  // .publications__title
+
+  &__title {
+    font-weight: 700;
+    line-height: 20px;
+    color: $regular_color;
+    margin-bottom: 15px;
+    &:hover {
+      color: $accent_color;
+    }
+  }
+
+  // .publications__date
+
+  &__date {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $text_color;
+    display: block;
+  }
+
+  // .publications__content
+
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    border-top: $separator_color 4px solid;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,174 @@
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: white;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.container {
+  // от 0px до 767px
+  padding: 0 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    // от 768px включительно до 1023px
+    max-width: 648px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    // от 1024px включительно до 1443зpx
+    max-width: 904px;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    // от 1440px включительно do 1919px
+    max-width: 1320px;
+  }
+
+  @media screen and (min-width: $breakpoint-xxl) {
+    // от 1920px включительно и до бесконечности
+    max-width: 1600px;
+  }
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  a {
+    color: $regular_color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      height: 6px;
+      width: 6px;
+      border-bottom: $regular_color solid 2px;
+      border-right: $regular_color solid 2px;
+      transform: rotate(-45deg) translate(0px, -7px);
+    }
+  }
+}
+
+.section__subtitle {
+  @include gradient_text;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+.icon__dot {
+  @media screen and (min-width: $breakpoint-md) {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  background: $gradient_supersoft;
+  overflow: hidden;
+}
+.wrapper__white {
+  height: 20px;
+  position: relative;
+  margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    right: 5%;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background-color: rgb(202, 202, 219);
+    @media screen and (min-width: $breakpoint-md) {
+      left: 2.6%;
+      right: 2.6%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      left: 2%;
+      right: 2%;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+      left: 1.4%;
+      right: 1.4%;
+    }
+    @media screen and (min-width: $breakpoint-xxl) {
+      left: 1%;
+      right: 1%;
+    }
+  }
+  &::after {
+    bottom: 0px;
+    left: 10%;
+    right: 10%;
+    background-color: rgb(231, 231, 242);
+    @media screen and (min-width: $breakpoint-md) {
+      left: 5.2%;
+      right: 5.2%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      left: 4%;
+      right: 4%;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+      left: 2.8%;
+      right: 2.8%;
+    }
+    @media screen and (min-width: $breakpoint-xxl) {
+      left: 2%;
+      right: 2%;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  height: 0;
+}
+.svg_sprite {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}

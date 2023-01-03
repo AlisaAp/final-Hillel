@@ -1,0 +1,407 @@
+.header {
+  // background: url('../images/Symbol.svg') no-repeat 50%/cover;
+  background: url("../images/Symbol.svg") no-repeat 50% / auto 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    // от 768px включительно до 1023px
+    background: url("../images/Symbol.svg") no-repeat 35% / auto 100%;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    // от 768px включительно до 1023px
+    background: url("../images/Symbol.svg") no-repeat 45% / auto 100%;
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    // от 768px включительно до 1023px
+    background: url("../images/Symbol.svg") no-repeat 50% / auto 100%;
+  }
+
+  &__container {
+    padding: 0 15px;
+  }
+  &__main {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__head {
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-end;
+      position: relative;
+    }
+  }
+  // .header__social
+
+  &__social {
+    padding: 10px 0;
+    text-align: center;
+    @include flex-sb;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    @media screen and (min-width: $breakpoint-md) {
+      justify-content: left;
+      gap: 18px;
+      padding: 50px 0 30px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      justify-content: right;
+      padding-bottom: 16px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -15px;
+      right: -15px;
+      bottom: 0;
+      background-color: rgba(245, 245, 250, 0.2);
+      z-index: -1;
+      @media screen and (min-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+  }
+
+  // .header__lang-list
+
+  &__lang-list {
+    @include flex-sb;
+  }
+
+  // .header__lang-item
+
+  &__lang-item {
+    border-radius: 8px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    &:active {
+      background: $accent_color;
+    }
+
+    &.active {
+      background: $accent_color;
+    }
+  }
+
+  // .header__lang-link
+
+  &__lang-link {
+    padding: 6px 7px 4px;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $basic_white;
+  }
+
+  // .header__social-adress
+  &__social-adress {
+    color: rgba(179, 179, 186, 1);
+    line-height: 20px;
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+  // .header__social-number
+
+  &__social-number {
+    line-height: 20px;
+    font-weight: 700;
+    color: $basic_white;
+  }
+
+  // .header__social-fb
+  &__social-fb {
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+
+  // .header__social-fb-icon
+
+  &__social-fb-icon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    padding-top: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-top: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+  }
+
+  // .header__logo-link
+
+  &__logo-link {
+    line-height: 0;
+  }
+
+  // .header__logo-icon
+
+  &__logo-icon {
+    width: 69.33px;
+    height: 32px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // .header__logo-slash
+
+  &__logo-slash {
+    position: absolute;
+    width: 11.62px;
+    height: 26px;
+    top: 15px;
+    left: 73.3px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+    + span {
+      font-size: 20px;
+      line-height: 24px;
+      @media screen and (min-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+  }
+
+  // .header__burger
+
+  &__burger {
+    position: absolute;
+    top: 50%;
+    right: 7px; //22-15
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 0;
+    &.active2:before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 32px;
+      height: 32px;
+      transform: translate(2px, 2px);
+      border-radius: 8px;
+      background-color: $soft_color;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+      }
+      &::after {
+        top: 6px;
+      }
+    }
+  }
+}
+
+// .header-nav
+.header-nav {
+  position: fixed;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  padding: 19px 12px 12px;
+  transform: translateY(101%);
+  transition: 0.8s linear;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px 12px 0 0;
+  z-index: 1;
+  &.active {
+    transform: translateY(0);
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    transform: translateY(0);
+    position: static;
+    border-radius: unset;
+    background: transparent;
+    padding: 30px 0 0;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 0;
+  }
+  // .header-nav__close
+
+  &__close {
+    width: 18px;
+    height: 18px;
+    margin: 0 7px 27px auto;
+    position: relative;
+    cursor: pointer;
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 9px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(236, 111, 93, 1);
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // .header-nav__list
+
+  &__list {
+    @media screen and (min-width: $breakpoint-md) {
+      display: flex;
+      gap: 15px;
+      line-height: 20px;
+      font-weight: 700;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  // .header-nav__item
+
+  &__item {
+    padding: 7px 0;
+    margin-top: 15px;
+    background-color: $bg_color;
+    text-align: center;
+    border-radius: 12px;
+    &:hover {
+      background-color: $separator_color;
+      @media screen and (min-width: $breakpoint-md) {
+        background-color: transparent;
+      }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  // .header-nav__link
+
+  &__link {
+    display: block;
+    line-height: 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: $regular_color;
+    &:active {
+      color: $accent_color;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      line-height: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-color: white;
+      }
+    }
+  }
+}
+// .header-inner
+.header-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  // .header-inner__title
+
+  &__title {
+    @include main_title;
+    text-align: center;
+  }
+
+  // .hheader-inner__icon-scroll
+  &__scroll {
+    width: 42px;
+    height: 42px;
+    margin: 40px auto 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      width: 15px;
+      height: 15px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      border: 2px solid $accent_color;
+    }
+    &:hover:before {
+      border-bottom: 2px solid $accent_color;
+      border-left: 2px solid $accent_color;
+    }
+  }
+}
+.active-link {
+  color: $accent_color;
+}

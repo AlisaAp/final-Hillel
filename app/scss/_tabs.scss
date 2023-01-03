@@ -1,0 +1,132 @@
+// TABS //
+.section-tabs {
+  display: flex;
+  flex-flow: column;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 9.5px;
+    align-items: center;
+  }
+}
+.tabs {
+  &__section {
+    margin-top: 30px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 60px;
+    }
+    .container {
+      display: flex;
+      flex-flow: column;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        flex-flow: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 4px;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+
+  &__container {
+    flex: 1 1 49%;
+    @media screen and (min-width: $breakpoint-lg) {
+      /*padding-top: 9.5px;*/
+    }
+  }
+
+  &__head {
+    overflow-x: scroll;
+    margin-right: -30px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      margin-right: calc(-50vw + 324px);
+      padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      margin-right: 0;
+      min-width: auto;
+      padding-bottom: 0;
+      padding-right: 60px;
+      overflow: auto;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex-flow: column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    font-weight: 700;
+    color: $text_color;
+    font-size: 30px;
+    line-height: 37px;
+    &:hover {
+      color: $accent_color;
+    }
+    white-space: nowrap;
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 38px;
+      line-height: 46px;
+    }
+    &.active {
+      @include gradient_text;
+    }
+  }
+
+  &__body {
+    padding-top: 30px;
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+    @media screen and (min-width: $breakpoint-md) {
+      padding-top: 60px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-top: 9.5px;
+      padding-left: 60px;
+      border-top: 0px;
+      /*border-left: 4px solid rgba(255, 255, 255, 0.3);*/
+    }
+  }
+  &__block {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__block-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  &__block-description {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,163 @@
+// CLIENTS //
+
+.clients {
+	// .clients__section
+  
+	&__section {
+	  text-align: center;
+	  margin-top: 60px;
+	  @media screen and (min-width: $breakpoint-xxl) {
+		max-width: 1720px;
+		margin: 0 auto;
+	  }
+	  span {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		color: $main_color;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	  }
+	}
+  
+	// .clients__box
+  
+	&__box {
+	  margin-top: 30px;
+	  @media screen and (min-width: $breakpoint-md) {
+		/*margin: 30px -60px 0;*/
+	  }
+	}
+  
+	// .clients__list
+  
+	&__list {
+	  display: flex;
+	  flex-flow: column;
+	  @media screen and (min-width: $breakpoint-md) {
+		flex-flow: wrap;
+		flex-wrap: wrap;
+	  }
+	}
+  
+	// .clients_item
+  
+	&_item {
+	  a {
+		height: 120px;
+		display: block;
+	  }
+  
+	  @media screen and (min-width: $breakpoint-md) {
+		flex: 1 1 33%;
+	  }
+	  @media screen and (min-width: $breakpoint-lg) {
+		flex: 1 1 25%;
+	  }
+  
+	  &:nth-child(n + 7) {
+		display: none;
+		@media screen and (min-width: $breakpoint-md) {
+		  display: block;
+		}
+	  }
+  
+	  &:nth-child(1) {
+		a {
+		  background: #1c4280 url(../images/partners/hillel.png) no-repeat 50% /
+			auto;
+		  background-size: 217px 48px;
+		}
+		@media screen and (min-width: $breakpoint-xxl) {
+		  border-radius: 9px 0 0 0;
+		}
+	  }
+	  &:nth-child(2) {
+		a {
+		  background: #143646 url(../images/partners/wannabiz.png) no-repeat 50% /
+			auto;
+		  background-size: 199px 32px;
+		}
+	  }
+	  &:nth-child(3) {
+		a {
+		  background: #f48b30 url(../images/partners/tapgerine.png) no-repeat 50% /
+			auto;
+		  background-size: 179px 44px;
+		}
+	  }
+	  &:nth-child(4) {
+		a {
+		  background: #9e4dc3 url(../images/partners/3dlook.png) no-repeat 50% /
+			auto;
+		  background-size: 180px 42px;
+		}
+		@media screen and (min-width: $breakpoint-xxl) {
+		  border-radius: 0 9px 0 0;
+		}
+	  }
+	  &:nth-child(5) {
+		a {
+		  background: #fd9339 url(../images/partners/orangear.png) no-repeat 50% /
+			auto;
+		  background-size: 174px 44px;
+		}
+	  }
+	  &:nth-child(6) {
+		a {
+		  background: #e2e2e4 url(../images/partners/adtelligent.png) no-repeat
+			50% / auto;
+		  background-size: 194.8px 48px;
+		}
+	  }
+	  &:nth-child(7) {
+		a {
+		  background: #c71c36 url(../images/partners/clickky.png) no-repeat 50% /
+			auto;
+		  background-size: 138px 61px;
+		}
+	  }
+	  &:nth-child(8) {
+		a {
+		  background: #dcf3f9 url(../images/partners/eco-leasing.png) no-repeat
+			50% / auto;
+		  background-size: 146px 76px;
+		}
+	  }
+	  &:nth-child(9) {
+		a {
+		  background: #eaeaea url(../images/partners/ingratek.png) no-repeat 50% /
+			auto;
+		  background-size: 182px 60px;
+		}
+		@media screen and (min-width: $breakpoint-xxl) {
+		  border-radius: 0 0 0 9px;
+		}
+	  }
+	  &:nth-child(10) {
+		a {
+		  background: #282240 url(../images/partners/city-par.png) no-repeat 50% /
+			auto;
+		  background-size: 181px 38px;
+		}
+	  }
+	  &:nth-child(11) {
+		a {
+		  background: #1d4568 url(../images/partners/artprint.png) no-repeat 50% /
+			auto;
+		  background-size: 189px 46px;
+		}
+	  }
+	  &:nth-child(12) {
+		a {
+		  background: #000000 url(../images/partners/ultimatecard.png) no-repeat
+			50% / auto;
+		  background-size: 152px 95px;
+		}
+		@media screen and (min-width: $breakpoint-xxl) {
+		  border-radius: 0 0 9px 0;
+		}
+	  }
+	}
+  }
+  
