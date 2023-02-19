@@ -1,17 +1,17 @@
 .header {
   // background: url('../images/Symbol.svg') no-repeat 50%/cover;
-  background: url("../images/Symbol.svg") no-repeat 50% / auto 100%;
+  background: url('../images/Symbol.svg') no-repeat 50% / auto 100%;
   @media screen and (min-width: $breakpoint-md) {
     // от 768px включительно до 1023px
-    background: url("../images/Symbol.svg") no-repeat 35% / auto 100%;
+    background: url('../images/Symbol.svg') no-repeat 35% / auto 100%;
   }
   @media screen and (min-width: $breakpoint-lg) {
     // от 768px включительно до 1023px
-    background: url("../images/Symbol.svg") no-repeat 45% / auto 100%;
+    background: url('../images/Symbol.svg') no-repeat 45% / auto 100%;
   }
   @media screen and (min-width: $breakpoint-xl) {
     // от 768px включительно до 1023px
-    background: url("../images/Symbol.svg") no-repeat 50% / auto 100%;
+    background: url('../images/Symbol.svg') no-repeat 50% / auto 100%;
   }
 
   &__container {
@@ -25,10 +25,12 @@
 
   &__head {
     @media screen and (min-width: $breakpoint-lg) {
-      display: flex;
+      /*display: flex;
       flex-flow: column;
       align-items: flex-end;
-      position: relative;
+      position: relative;*/
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   // .header__social
@@ -51,7 +53,7 @@
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: -15px;
@@ -147,10 +149,12 @@
     align-items: center;
     gap: 20px;
     @media screen and (min-width: $breakpoint-lg) {
-      padding-top: 0;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      /* padding-top: 0;
       position: absolute;
       top: 50%;
-      left: 0;
+      left: 0;*/
     }
   }
 
@@ -203,7 +207,7 @@
     cursor: pointer;
     z-index: 0;
     &.active2:before {
-      content: "";
+      content: '';
       position: absolute;
       top: -50%;
       left: -50%;
@@ -227,7 +231,7 @@
       background: #fff;
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: -6px;
         left: 0;
@@ -280,7 +284,7 @@
     }
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 9px;
       left: 0;
@@ -383,7 +387,7 @@
     position: relative;
     cursor: pointer;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 8px;
       left: 11px;
