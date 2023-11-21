@@ -1,4 +1,4 @@
-# Here use name project
+# Responsive landing page
 
 ### node version 
 *v18.12.0*
